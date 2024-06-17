@@ -29,7 +29,7 @@ function getComputerChoice() {
 }
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
-
+    
     playRound(humanChoice, computerChoice);
     // Write the logic top play a round
     console.log(playRound);
