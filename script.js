@@ -14,15 +14,41 @@ function getComputerChoice() {
     const computerScore = 0;
     
     // Write the logic to play a single round
-    function playRound(humanChoice, computerChoice); {
-    let humanChoice = "rock, ROCK, Rock";
+    function playRound(humanChoice, computerChoice) {
+    let humanChoice = ("rock", "paper", "scizzors");
     if (humanChoice === computerChoice)
     {
         console.log("It's a Tie!");
+    } else if (humanChoice == "rock"); {
+        if (computerChoice == "scizzors"); {
+            console.log("You Win!");
+            humanScore++;
+        } else {
+            console.log("You Lose!");
+            computerScore++;
+        }
+    } else if (humanChoice == "paper") {
+        if (computerChoice == "rock"); {
+            console.log("You Win!");
+            humanScore++;
+        } else {
+            console.log("You Lose!");
+            computerScore++;
     }
+
+} else if (humanChoice == "scizzors") {
+    if (computerChoice == "paper"); {
+        console.log("You Win!");
+        humanScore++;
+    } else {
+        console.log("You Lose!");
+        computerScore++;
 }
+}
+    }
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
     playRound(humanChoice, computerChoice);
-    // Write the logic top play 5 rounds 
+    // Write the logic top play a round
+    console.log(playRound);
