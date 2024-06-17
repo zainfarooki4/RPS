@@ -10,6 +10,19 @@ function getComputerChoice() {
 
     }
     // Declare player score variables
+    const humanScore = 0;
+    const computerScore = 0;
     
     // Write the logic to play a single round
+    function playRound(humanChoice, computerChoice); {
+    let humanChoice = "rock, ROCK, Rock";
+    if (humanChoice === computerChoice)
+    {
+        console.log("It's a Tie!");
+    }
+}
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanChoice, computerChoice);
     // Write the logic top play 5 rounds 
