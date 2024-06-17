@@ -7,6 +7,9 @@ function getComputerChoice() {
     // Write the logic to get human choice
     function getHumanChoice() {
         const choice = prompt("Rock, Paper, or Scissors?");
+        console.log(choice);
+        while (choice !== 'rock' && choicehoice !== 'paper' && choice !== 'scissors') {
+            choice = prompt('Select again.');
 
     }
     // Declare player score variables
@@ -32,4 +35,9 @@ function getComputerChoice() {
     
     playRound(humanChoice, computerChoice);
     // Write the logic top play a round
-    console.log(playRound);
+    function playGame(i){
+        for (let i = 0; i < 5; i++) {
+            console.log(playRound(getHumanChoice(), getComputerChoice()));
+        }
+    }
+}
