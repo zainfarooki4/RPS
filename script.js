@@ -1,7 +1,7 @@
 // Write logic to get computer choice
 function getComputerChoice() { // Creating function
     const options = ["rock", "paper", "scissors"]; // options coputer can choose from
-    return options = options[Math.floor(Math.random() * options.length)] // Making computer choose randomly
+    return options[Math.floor(Math.random() * options.length)] // Making computer choose randomly
 }
     // Write the logic to get human choice
     function getHumanChoice() {
@@ -31,7 +31,7 @@ function getComputerChoice() { // Creating function
     }
 }
     // Write the logic top play a round
-    function playGame(i){
+    function playGame() {
         for (let i = 0; i < 5; i++) {       // 5 rounds being played
             const humanSelection = getHumanChoice();
             const computerSelection = getComputerChoice();
