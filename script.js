@@ -8,6 +8,19 @@ function getComputerChoice() { // Creating function
         let choice = prompt("Rock, Paper, or Scissors?").toLowerCase(); // choices the human can choose
         while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors') {
             choice = prompt('Select again.').toLowerCase();
+
+            // Buttons for each selection
+            const rock = document.createElement('button');
+            rock.textContent('rock');
+            rock.addEventListener("click", getHumanChoice);
+
+            const paper = document.createElement('button');
+            paper.textContent('paper');
+            paper.addEventListener("click", getHumanChoice);
+            
+            const scissors = document.createElement('button');
+            scissors.textContent('scissors');
+            scissors.addEventListener("click", getHumanChoice);
     }
     return choice;
 }
@@ -32,7 +45,7 @@ function getComputerChoice() { // Creating function
 }
     // Write the logic top play a round
     function playGame() {
-        for (let i = 0; i < 5; i++) {       // 5 rounds being played
+        for (let i = 0; i < 1; i++) {       // 5 rounds being played
             const humanSelection = getHumanChoice();
             const computerSelection = getComputerChoice();
             playRound(humanSelection, computerSelection);

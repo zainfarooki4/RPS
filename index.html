@@ -3,10 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Rock Paper Scissors</title>
+    <script>
+        // Function to get computer choice
+        function getComputerChoice() {
+            const options = ["rock", "paper", "scissors"];
+            return options[Math.floor(Math.random() * options.length)];
+        }
+
+        // Declare player score variables
+        let humanScore = 0;
+        let computerScore = 0;
+
+        // Function to play a single round
+        function playRound(humanChoice, computerChoice) {
+            console.log(`Human: ${humanChoice} vs Computer: ${computerChoice}`);
+            if (humanChoice === computerChoice) {
+                console.log("It's a Tie!");
+            } else if ((humanChoice === "rock" && computerChoice === "scissors") ||
+                       (humanChoice === "paper" && computerChoice === "rock") ||
+                       (humanChoice === "scissors" && computerChoice === "paper")) {
+                console.log("You Win!");
+                humanScore++;
+            } else {
+                console.log("You Lose!");
+                computerScore++;
+            }
+            updateScore();
+        }
+
+        // Function to update the score on the webpage
+        function updateScore() {
+            document.getElementById('humanScore').textContent = humanScore;
+            document.getElementById('computerScore').textContent = computerScore;
+        }
+
+        // Function to play the game
+        function playGame(humanChoice) {
+            const computerSelection = getComputerChoice();
+            playRound(humanChoice, computerSelection);
+        }
+
+        // Event listeners for buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('rock').addEventListener('click', () => playGame('rock'));
+            document.getElementById('paper').addEventListener('click', () => playGame('paper'));
+            document.getElementById('scissors').addEventListener('click', () => playGame('scissors'));
+        });
+    </script>
 </head>
 <body>
-    <script></script>
+    <div>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div id="result">
+        <h1 id="score">Score: Human <span id="humanScore">0</span> - Computer <span id="computerScore">0</span></h1>
+    </div>
 </body>
 </html>
